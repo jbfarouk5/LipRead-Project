@@ -1,0 +1,40 @@
+{
+    "paths": {
+        "input_folder": "C:/Users/Lenovo/PycharmProjects/PythonProject/decoupage/1",
+        "output_dir":   "output"
+    },
+    "ffmpeg": {
+        "executable": "C:/Users/Lenovo/ffmpeg-8.1-full_build-shared/bin/ffmpeg.exe"
+    },
+    "pipeline": {
+        "expected_words": 13,
+        "video_extensions": [".mp4", ".mov", ".avi", ".mkv", ".m4v", ".wmv"]
+    },
+    "vad": {
+        "onset":            0.55,
+        "offset":           0.55,
+        "min_duration_on":  0.1,
+        "min_duration_off": 0.1
+    },
+    "segmentation": {
+        "min_segment_length": 0.2,
+        "padding_before":     0.08,
+        "padding_after":      0.07,
+        "gap_threshold":      0.25
+    },
+    "refinement": {
+        "long_segment_factor": 1.4,
+        "min_valid_duration":  0.4,
+        "max_iterations":      10
+    },
+    "huggingface": {
+        "hub_disable_xet":      true,
+        "hub_download_timeout": 600,
+        "hub_etag_timeout":     60
+    },
+    "logging": {
+        "level":      "INFO",
+        "file":       "pipeline.log",
+        "file_level": "DEBUG"
+    }
+}
